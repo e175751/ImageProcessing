@@ -1,0 +1,57 @@
+\documentclass[a4paper,11pt,titlepage]{bxjsarticle}
+\usepackage{listings}
+\usepackage[dvipdfmx]{graphicx}    
+\usepackage{amsmath}
+\usepackage{fancybox,ascmac}
+\usepackage{url}
+\title{画像処理　レポート１}
+\author{175751C 宮城孝明}
+\date{\today}
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+\section{環境構築}
+  1 開発環境構築の手順は、anaconda3-2019.03を使用し
+  2 conda create -n 環境名 python=バージョン
+  3 source activate (環境名)
+  4 pip install opencv-python
+  5 pip install Pillow
+  6 pip install numpy
+\section{コード(python opencv)}
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single]
+import os
+import cv2
+
+def main():
+    img = "./img_89.png"
+    img = imread(image_url, cv2.IMREAD_GRAYSCALE)
+    cv2.imshow('image', img)
+
+if __name__ == "__main__":
+    main()
+\end{lstlisting}
+\section{コード(python pil)}
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single]
+import os
+import PIL import Image
+import numpy as np
+
+def main():
+    image_url = "./img_86.png"
+    img = Image.open(image_url)
+    img.show()
+
+if __name__ == "__main":
+    main()
+\end{lstlisting}
+
+
+
+\begin{thebibliography}{99}
+\bibitem{book1}
+\bibitem{book2}
+\end{thebibliography}
+\end{document}
+
+

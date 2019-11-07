@@ -1,0 +1,18 @@
+開発環境構築の手順は、anaconda3-2019.03を使用し
+conda create -n 環境名 python=バージョン
+source activate (環境名)
+pip install opencv-python
+pip install Pillow
+pip install numpy
+
+source code (python)
+import cv2
+image_url = "./画像名"
+img = imread(image_url, cv2.IMREAD_GRAYSCALE)
+cv2.imshow('image', img)
+
+from PIL import Image
+import numpy as np
+img = Image.open(image_url)
+width, height = img.size
+img2 = Image.new('RGB', (width, height))
