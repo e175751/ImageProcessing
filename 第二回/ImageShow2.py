@@ -1,17 +1,14 @@
-import os
-import cv2
+from PIL import Image
 from matplotlib import pyplot as plt
 
-def main():
-    url = "sample.jpg"
-    ImageShow(url)
-    print("finish")
-
-def ImageShow(url):
-    img = cv2.imread(url)
-    plt.imshow(img)
-    plt.show()
+def ImageShow():
+    im = Image.open("sample.jpg")
+    plt.imshow(im)
+    plt.pause(10)
+    plt.clf()
+    print("clf()起動しました")
+    plt.pause(5)
+    ImageShow()
 
 if __name__ == "__main__":
-    main()
-
+    ImageShow()
